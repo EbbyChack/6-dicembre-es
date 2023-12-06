@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p class="card-text">
                 ${element.price} $
                 </p>
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between buttonz" >
                 <button class="btn btn-primary">Add to cart</button>
                 <button class="btn btn-danger">Remove</button>
               </div>
@@ -41,6 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
         cartButton.addEventListener("click", () => {
           const card = cartButton.closest(".card");
           const clonedCard = card.cloneNode(true);
+
+        const removingButtonz = clonedCard.querySelectorAll(".buttonz");
+        removingButtonz.forEach(rButton => {
+            rButton.remove();
+        });
+        
 
           listContainer.appendChild(clonedCard);
         });
