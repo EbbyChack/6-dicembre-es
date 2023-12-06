@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       books.forEach((element) => {
         booksHTML += `<div class="col-3 g-5">
-            <div class="card">
-              <img src="${element.img}" class="card-img-top" alt="${element.title}" />
-              <div class="card-body">
+            <div class="card h-100" >
+              <img src="${element.img}" class="card-img-top img-fluid" alt="${element.title}"  />
+              <div class="card-body d-flex flex-column flex-wrap justify-content-between">
                 <h5 class="card-title">${element.title}</h5>
                 <p class="card-text">
                 ${element.price} $
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         removingButtonz.forEach(rButton => {
             rButton.remove();
         });
-        
+
 
           listContainer.appendChild(clonedCard);
         });
